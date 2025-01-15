@@ -1,0 +1,7 @@
+{
+    "authToken": "oauth:zt14ra1vjlhcpuwiqq64wm2vrlpllh",
+    "userName": "ObjectsCountries",
+    "channelName": "ObjectsCountries",
+    "serverName": "irc.twitch.tv",
+    "serverPort": 6697
+}
