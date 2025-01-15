@@ -16,7 +16,7 @@
 
 * [Craft Presence](https://www.curseforge.com/minecraft/mc-mods/craftpresence) (config [here](craftpresence_redacted.json), using Fabric)
   * Note: replace server IP, Client ID and Discord link manually
-* [Vanilla Tweaks](https://vanillatweaks.net/share#IoZcv4) (zip [here](VanillaTweaks.zip))
+* [Vanilla Tweaks](https://vanillatweaks.net/share#YYdT9F) (zip [here](VanillaTweaks.zip))
 
 ### Guilty Gear Strive
 
