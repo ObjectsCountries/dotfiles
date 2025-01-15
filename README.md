@@ -2,20 +2,20 @@
 
 ## Dotfiles
 
-* [Fastfetch](Config Files/fastfetch)
-* [Fish](Config Files/fish)
-* [Hyfetch](Config Files/hyfetch.json)
-* [Kitty](Config Files/kitty)
-* [Neovim](Config Files/nvim)
-* [Neovide](Config Files/neovide)
-* [Starship](Config Files/starship.toml)
+* [Fastfetch](Config%20Files/fastfetch)
+* [Fish](Config%20Files/fish)
+* [Hyfetch](Config%20Files/hyfetch.json)
+* [Kitty](Config%20Files/kitty)
+* [Neovim](Config%20Files/nvim)
+* [Neovide](Config%20Files/neovide)
+* [Starship](Config%20Files/starship.toml)
 
 ## Mods
 
 ### Minecraft
 
 * [Craft Presence](https://www.curseforge.com/minecraft/mc-mods/craftpresence) (config [here](craftpresence_redacted.json), using Fabric)
-  * Note: replace server IP and Discord link manually
+  * Note: replace server IP, Client ID and Discord link manually
 * [Vanilla Tweaks](https://vanillatweaks.net/share#IoZcv4) (zip [here](VanillaTweaks.zip))
 
 ### Guilty Gear Strive
