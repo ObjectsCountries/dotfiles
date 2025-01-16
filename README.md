@@ -1,5 +1,23 @@
 # Dotfiles, Mods, etc.
 
+## Info
+
+|Component|Using|Package|
+|-|-|-|
+|Icons|Papirus|`papirus-icon-theme`|
+|Color of Folders|Papirus Folders script|`papirus-folders` (AUR)|
+|`ls` replacement|`eza`|`eza`|
+|`cat` replacement|`bat`|`bat`|
+|`git diff` replacement|Delta|`git-delta`|
+|Theme for just about everything|Cyberdream|Not on AUR, available as a Neovim package (scottmckendry/cyberdream.nvim)|
+
+`eza` customization:
+```
+eza -l --color=always --icons=always --hyperlink -a --group-directories-first --git --total-size --no-user --no-time
+```
+
+Cyberdream for other apps available under their [extras](https://github.com/scottmckendry/cyberdream.nvim/tree/main/extras)
+
 ## Dotfiles
 
 * [Fastfetch](Config%20Files/fastfetch)
