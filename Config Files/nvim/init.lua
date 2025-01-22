@@ -42,7 +42,7 @@ require("lazy").setup({
 				configs.setup({
 					ensure_installed = { "c_sharp", "html", "markdown", "python", "lua" },
 					sync_install = true,
-					highlight = { enable = false },
+					highlight = { enable = true },
 					indent = { enable = true },
 				})
 			end,
@@ -221,7 +221,7 @@ if vim.g.neovide then
 end
 
 vim.g.arduino_dir = "/usr/share/arduino"
-vim.g.arduino_home_dir = "/home/kasra/.arduino15"
+vim.g.arduino_home_dir = "$HOME/.arduino15"
 
 local function arduino_status()
 	if vim.bo.filetype ~= "arduino" then
@@ -312,7 +312,7 @@ lspconfig.lua_ls.setup({ capabilities = capabilities, settings = { Lua = { diagn
 lspconfig.omnisharp_mono.setup({
 	capabilities = capabilities,
 	cmd = {
-		"/home/kasra/.local/share/nvim/mason/packages/omnisharp-mono/omnisharp-mono",
+		"$HOME/.local/share/nvim/mason/packages/omnisharp-mono/omnisharp-mono",
 		"--languageserver",
 		"--hostPID",
 		tostring(pid),
@@ -344,13 +344,13 @@ lspconfig.rust_analyzer.setup({ capabilities = capabilities })
 lspconfig.arduino_language_server.setup({
 	capabilities = capabilities,
 	cmd = {
-	    "/usr/bin/arduino-language-server",
+	    "$HOME/.local/share/nvim/mason/bin/arduino-language-server",
 		"-clangd",
-		"/home/kasra/.local/share/nvim/mason/bin/clangd",
+		"$HOME/.local/share/nvim/mason/bin/clangd",
 		"-cli",
 		"/usr/bin/arduino-cli",
 		"-cli-config",
-		"/home/kasra/.arduino15/arduino-cli.yaml",
+		"$HOME/.arduino15/arduino-cli.yaml",
         "-fqbn",
         "arduino:avr:uno"
 	},

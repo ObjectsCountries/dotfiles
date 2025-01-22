@@ -18,6 +18,39 @@ eza -l --color=always --icons=always --hyperlink -a --group-directories-first --
 
 Cyberdream for other apps available under their [extras](https://github.com/scottmckendry/cyberdream.nvim/tree/main/extras)
 
+## Desktop
+
+* Breeze Dark theme for everything except icons
+* Dynamic Wallpaper: `plasma5-wallpapers-dynamic`
+  * Use [Lakeside](Wallpaper/wallpaper.avif)
+* Analog Clock in top left
+* Wunderground in bottom left
+* Digital Clock to the right of Analog Clock
+  * 12-Hour for time, M/d/yyyy for date
+* Media player in bottom right
+* Battery above media player (align to right)
+
+### Panel
+
+* One panel at the top
+* Darwin Menu (extension)
+  * `endeavouros` icon
+* Global Menu
+* Panel Spacer
+* Icons-Only Task Manager
+  * Chrome, Discord, Steam
+* Panel Spacer
+* Wunderground (extension)
+* System Tray
+* Margins Separator
+* Total CPU Use
+* Memory Usage
+* Margins Separator
+* Digital Clock
+  * M/d beside region defaults time
+* Application Menu
+  * application-menu icon
+
 ## Dotfiles
 
 * [Fastfetch](Config%20Files/fastfetch)
