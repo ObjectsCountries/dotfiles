@@ -2,7 +2,7 @@
 # VERSION: 3.0
 SETUVAR EDITOR:nvim
 SETUVAR BAT_THEME:cyberdream
-SETUVAR PATH:$HOME/.config/emacs/bin:/usr/local/MATLAB/R2024b/bin:$HOME/.cargo/bin:$PATH
+SETUVAR PATH:$HOME/.config/emacs/bin:/usr/local/MATLAB/R2024b/bin:$HOME/.cargo/bin:$HOME/.local/share/nvim/mason/bin:$PATH
 SETUVAR ARDUINO_HOME:$HOME/.arduino15
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:7b8496

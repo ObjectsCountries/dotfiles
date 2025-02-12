@@ -249,7 +249,7 @@ require("lualine").setup({
 		lualine_b = { "filename", "branch", "diff", "diagnostics", arduino_status },
 		lualine_c = { "%=" },
 		lualine_x = {},
-		lualine_y = { "filetype", "progress" },
+		lualine_y = { "filetype", "progress", { 'datetime', style = '%a %-m/%-d %-I:%M%P' } },
 		lualine_z = {
 			{ "location", separator = { right = "" }, left_padding = 2 },
 		},
@@ -312,7 +312,7 @@ lspconfig.lua_ls.setup({ capabilities = capabilities, settings = { Lua = { diagn
 lspconfig.omnisharp_mono.setup({
 	capabilities = capabilities,
 	cmd = {
-		"$HOME/.local/share/nvim/mason/packages/omnisharp-mono/omnisharp-mono",
+        "$HOME/.local/share/nvim/mason/packages/omnisharp-mono/omnisharp-mono",
 		"--languageserver",
 		"--hostPID",
 		tostring(pid),
@@ -344,7 +344,7 @@ lspconfig.rust_analyzer.setup({ capabilities = capabilities })
 lspconfig.arduino_language_server.setup({
 	capabilities = capabilities,
 	cmd = {
-	    "$HOME/.local/share/nvim/mason/bin/arduino-language-server",
+	    "arduino-language-server",
 		"-clangd",
 		"$HOME/.local/share/nvim/mason/bin/clangd",
 		"-cli",
