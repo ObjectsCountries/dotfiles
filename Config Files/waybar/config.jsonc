@@ -53,16 +53,19 @@
     },
     "cpu": {
         "format": "{usage}% CPU",
-        "interval": 1
+        "interval": 1,
+        "on-click": "missioncenter"
     },
     "memory": {
         "format": "{percentage}% RAM",
-        "interval": 1
+        "interval": 1,
+        "on-click": "missioncenter"
     },
     "custom/gpu": {
         "format": "{} GPU",
         "exec": "gpu-usage-waybar --text-no-memory",
-        "return-type": "json"
+        "return-type": "json",
+        "on-click": "missioncenter"
     },
     "clock": {
         "format": "{:%a %m/%d %I:%M %p}"
