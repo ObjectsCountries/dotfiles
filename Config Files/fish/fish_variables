@@ -1,10 +1,10 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR EDITOR:nvim
-SETUVAR BAT_THEME:cyberdream
-SETUVAR PATH:$HOME/.config/emacs/bin:/usr/local/MATLAB/R2024b/bin:$HOME/.cargo/bin:$HOME/.local/share/nvim/mason/bin:$PATH
 SETUVAR ARDUINO_HOME:$HOME/.arduino15
-SETUVAR __fish_initialized:3400
+SETUVAR BAT_THEME:cyberdream
+SETUVAR EDITOR:nvim
+SETUVAR PATH:/usr/local/MATLAB/R2024b/bin:$HOME/.cargo/bin:$HOME/.local/share/nvim/mason/bin:$PATH
+SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:7b8496
 SETUVAR fish_color_cancel:ff6e5e
 SETUVAR fish_color_command:5ef1ff

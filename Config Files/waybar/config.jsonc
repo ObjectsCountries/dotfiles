@@ -27,7 +27,7 @@
     "custom/clipboard": {
         "format": "📋 Clipboard",
         "on-click": "cliphist list | wofi --dmenu | cliphist decode | wl-copy",
-        "on-click-right": "cliphist wipe"
+        "on-click-right": "cliphist wipe && dunstify 'Clipboard Cleared' -I /usr/share/icons/Papirus-Dark/64x64/apps/diodon.svg -a Clipboard"
     },
     "custom/weather": {
         "format": "{}°",
