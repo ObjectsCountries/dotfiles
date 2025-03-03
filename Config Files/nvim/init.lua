@@ -274,6 +274,7 @@ require("cmp").setup({
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+
 require("nvim_comment").setup()
 
 require("mason").setup()
@@ -329,7 +330,7 @@ lspconfig.basedpyright.setup({ capabilities = capabilities })
 lspconfig.ruff.setup({ capabilities = capabilities })
 lspconfig.marksman.setup({ capabilities = capabilities })
 lspconfig.biome.setup({ capabilities = capabilities })
-lspconfig.clangd.setup({ capabilities = capabilities })
+lspconfig.clangd.setup({ capabilities = capabilities, filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "ino" } })
 lspconfig.matlab_ls.setup({
 	capabilities = capabilities,
 	filetypes = { "matlab" },
@@ -342,9 +343,11 @@ lspconfig.matlab_ls.setup({
 })
 lspconfig.rust_analyzer.setup({ capabilities = capabilities })
 lspconfig.arduino_language_server.setup({
-	capabilities = capabilities,
-	cmd = {
-	    "arduino-language-server",
+	-- capabilities = capabilities,
+    cmd = {
+        "$HOME/.local/share/nvim/mason/bin/arduino-language-server",
+        "-board-name",
+        '"Arduino Uno"',
 		"-clangd",
 		"$HOME/.local/share/nvim/mason/bin/clangd",
 		"-cli",
@@ -353,7 +356,7 @@ lspconfig.arduino_language_server.setup({
 		"$HOME/.arduino15/arduino-cli.yaml",
         "-fqbn",
         "arduino:avr:uno"
-	},
+    }
 })
 lspconfig.kotlin_language_server.setup({ capabilities = capabilities })
 lspconfig.gradle_ls.setup({ capabilities = capabilities })
