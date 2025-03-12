@@ -207,7 +207,7 @@ local bubbles_theme = {
 }
 
 if vim.g.neovide then
-	vim.g.neovide_fullscreen = true
+	-- vim.g.neovide_fullscreen = true
 	vim.g.neovide_scale_factor = 0.8
 	local change_scale_factor = function(delta)
 		vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
@@ -329,7 +329,12 @@ lspconfig.html.setup({ capabilities = capabilities })
 lspconfig.basedpyright.setup({ capabilities = capabilities })
 lspconfig.ruff.setup({ capabilities = capabilities })
 lspconfig.marksman.setup({ capabilities = capabilities })
-lspconfig.biome.setup({ capabilities = capabilities })
+lspconfig.biome.setup({
+    capabilities = capabilities,
+	root_dir = function()
+		return vim.loop.cwd() -- current working directory
+	end,
+})
 lspconfig.clangd.setup({ capabilities = capabilities, filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "ino" } })
 lspconfig.matlab_ls.setup({
 	capabilities = capabilities,
@@ -343,17 +348,17 @@ lspconfig.matlab_ls.setup({
 })
 lspconfig.rust_analyzer.setup({ capabilities = capabilities })
 lspconfig.arduino_language_server.setup({
-	-- capabilities = capabilities,
+    capabilities = capabilities,
     cmd = {
-        "$HOME/.local/share/nvim/mason/bin/arduino-language-server",
+        "/home/kasra/.local/share/nvim/mason/packages/arduino-language-server/arduino-language-server",
         "-board-name",
         '"Arduino Uno"',
 		"-clangd",
-		"$HOME/.local/share/nvim/mason/bin/clangd",
+		"/home/kasra/.local/share/nvim/mason/packages/clangd/clangd_19.1.2/bin/clangd",
 		"-cli",
 		"/usr/bin/arduino-cli",
 		"-cli-config",
-		"$HOME/.arduino15/arduino-cli.yaml",
+		"/home/kasra/.arduino15/arduino-cli.yaml",
         "-fqbn",
         "arduino:avr:uno"
     }
