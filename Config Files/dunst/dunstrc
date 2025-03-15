@@ -111,7 +111,7 @@
     frame_width = 3
 
     # Defines color of the frame around the notification window.
-    frame_color = "#6010ff"
+    frame_color = "#6098B2"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -252,7 +252,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /usr/bin/dmenu -p dunst:
+    dmenu = /usr/bin/wofi -p dunst: -S dmenu
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/google-chrome-stable
@@ -348,7 +348,7 @@
     default_icon = dialog-information
 
 [urgency_normal]
-    background = "#8040ff"
+    background = "#2E8AAD"
     foreground = "#ffffff"
     timeout = 10
     override_pause_level = 30
