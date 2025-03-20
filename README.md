@@ -35,7 +35,21 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 #### Panel
 
 * One panel at the top
-* Darwin Menu (extension)
+* `plasma6-applets-panel-colorizer`
+  * Sky preset
+  * Panel:
+    * Background color: #1B1030
+  * Widgets:
+    * Background color: #8B5BC4
+    * Foreground color: #EAE6F0
+    * Radius of 16 and margin of 2 on all sides, spacing of 4
+  * Tray elements: no customization
+  * Overrides:
+    * Plain: Disable widgets customization
+      * Apply to Application Menu, Panel Spacer, Icons-Only Task Manager, second Panel Spacer, Total CPU Use, Memory Usage
+    * Plain Lavender: Background #1B1030, foreground #EAE6F0
+      * Apply to Global Menu
+* Application Menu
   * `endeavouros` icon
 * Global Menu
 * Panel Spacer
@@ -44,14 +58,10 @@ Cyberdream for other apps available under their [extras](https://github.com/scot
 * Panel Spacer
 * Wunderground (extension)
 * System Tray
-* Margins Separator
 * Total CPU Use
 * Memory Usage
-* Margins Separator
 * Digital Clock
   * M/d beside region defaults time
-* Application Menu
-  * application-menu icon
 
 ### Dotfiles
 
