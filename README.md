@@ -294,7 +294,7 @@ Zip [here](Minecraft/VanillaTweaks-1.21.zip).
 
 ### Other
 
-* [Lock Screen](sugar-candy)
+* [Lock Screen](Lock%20Screen)
 * [Background](Wallpaper)
 * Apps:
   * Discord
