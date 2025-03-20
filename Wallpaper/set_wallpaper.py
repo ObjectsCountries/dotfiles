@@ -18,7 +18,7 @@ wallpaper: int = -1
 previous_wallpaper: int = -1
 
 while True:
-    date: datetime = datetime.now(timezone(-timedelta(hours=8))) # Modify according to your timezone
+    date: datetime = datetime.now(timezone(-timedelta(hours=7))) # Modify according to your timezone
     azimuth: float = get_azimuth(float(getenv("LATITUDE")), float(getenv("LONGITUDE")), date)
     wallpaper = 1 + int((azimuth // 30) + 1) % 12
     wallpaper_path = f"/home/kasra/Dotfiles/Wallpaper/dear-{wallpaper}.jpg"
