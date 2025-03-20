@@ -12,7 +12,7 @@
 |Theme for just about everything|Cyberdream|Not on AUR, available as a Neovim package (scottmckendry/cyberdream.nvim)|
 
 `eza` customization:
-```
+```bash
 eza -l --color=always --icons=always --hyperlink -a --group-directories-first --git --total-size --no-user --no-time
 ```
 
@@ -294,14 +294,13 @@ Zip [here](Minecraft/VanillaTweaks-1.21.zip).
 
 ### Other
 
-* [Lock Screen](Lock%20Screen)
+* [Login Screen](Login%20Screen)
 * [Background](Wallpaper)
 * Apps:
   * Discord
-  * Steam (Download KTaNE and GGST)
+  * Steam (Download KTaNE and GGST, and maybe Marvel Rivals)
   * Spotify
   * Octopi (updates and downloads for Arch-based distros)
-  * PyCharm Professional Edition (for one of my college's CS classes)
   * Mission Center
   * Qalculate! (Qt)
   * Unity 2017.4.22f1 (for KTaNE modding)
