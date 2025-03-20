@@ -308,7 +308,7 @@ Zip [here](Minecraft/VanillaTweaks-1.21.zip).
 
 ## Hyprland
 
-Install the Python libraries `dotenv`, `psutil`, `pysolar` and `pywal` in order to get the auto-updating background
+Install the Python libraries `dotenv`, `psutil`, `pysolar` and `pywal` (`pysolar` through the AUR, the rest through Pacman) in order to get the auto-updating background.
 
 ### Waybar
 

@@ -1,24 +1,25 @@
 #!/usr/bin/env python3
 
 from datetime import datetime, timedelta, timezone
+from os import getenv
 import re
 import signal
 import subprocess
 import time
 
-import dotenv
+from dotenv import load_dotenv
 import psutil
 from pysolar.solar import get_azimuth
 import pywal
 
-config = dotenv.dotenv_values(".env")
+load_dotenv()
 
 wallpaper: int = -1
 previous_wallpaper: int = -1
 
 while True:
-    date: datetime = datetime.now(timezone(-timedelta(hours=8)))
-    azimuth: float = get_azimuth(float(config["LATITUDE"]), float(config["LONGITUDE"]), date)
+    date: datetime = datetime.now(timezone(-timedelta(hours=8))) # Modify according to your timezone
+    azimuth: float = get_azimuth(float(getenv("LATITUDE")), float(getenv("LONGITUDE")), date)
     wallpaper = 1 + int((azimuth // 30) + 1) % 12
     wallpaper_path = f"/home/kasra/Dotfiles/Wallpaper/dear-{wallpaper}.jpg"
 
