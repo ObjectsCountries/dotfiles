@@ -128,7 +128,6 @@ require("lazy").setup({
 				"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
 			},
 		},
-		"stevearc/vim-arduino",
 		"daeyun/vim-matlab",
 		"windwp/nvim-ts-autotag",
 		{
@@ -220,24 +219,6 @@ if vim.g.neovide then
 	end)
 end
 
-vim.g.arduino_dir = "/usr/share/arduino"
-vim.g.arduino_home_dir = "$HOME/.arduino15"
-
-local function arduino_status()
-	if vim.bo.filetype ~= "arduino" then
-		return ""
-	end
-	local port = vim.fn["arduino#GetPort"]()
-	local line = string.format("[%s]", vim.g.arduino_board)
-	if vim.g.arduino_programmer ~= "" then
-		line = line .. string.format(" [%s]", vim.g.arduino_programmer)
-	end
-	if port ~= 0 then
-		line = line .. string.format(" (%s:%s)", port, vim.g.arduino_serial_baud)
-	end
-	return line
-end
-
 require("lualine").setup({
 	options = {
 		theme = bubbles_theme,
@@ -246,7 +227,7 @@ require("lualine").setup({
 	},
 	sections = {
 		lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
-		lualine_b = { "filename", "branch", "diff", "diagnostics", arduino_status },
+		lualine_b = { "filename", "branch", "diff", "diagnostics" },
 		lualine_c = { "%=" },
 		lualine_x = {},
 		lualine_y = { "filetype", "progress", { 'datetime', style = '%a %-m/%-d %-I:%M%P' } },
@@ -293,7 +274,6 @@ require("mason-lspconfig").setup({
 		"clangd",
 		"matlab_ls",
 		"rust_analyzer",
-		"arduino_language_server",
 		"kotlin_language_server",
 		"gradle_ls",
 	},
@@ -347,22 +327,6 @@ lspconfig.matlab_ls.setup({
 	single_file_support = true,
 })
 lspconfig.rust_analyzer.setup({ capabilities = capabilities })
-lspconfig.arduino_language_server.setup({
-    capabilities = capabilities,
-    cmd = {
-        "/home/kasra/.local/share/nvim/mason/packages/arduino-language-server/arduino-language-server",
-        "-board-name",
-        '"Arduino Uno"',
-		"-clangd",
-		"/home/kasra/.local/share/nvim/mason/packages/clangd/clangd_19.1.2/bin/clangd",
-		"-cli",
-		"/usr/bin/arduino-cli",
-		"-cli-config",
-		"/home/kasra/.arduino15/arduino-cli.yaml",
-        "-fqbn",
-        "arduino:avr:uno"
-    }
-})
 lspconfig.kotlin_language_server.setup({ capabilities = capabilities })
 lspconfig.gradle_ls.setup({ capabilities = capabilities })
 
@@ -423,4 +387,4 @@ vim.keymap.set("n", "<A-7>", "<Cmd>BufferGoto 7<CR>", opts)
 vim.keymap.set("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
 vim.keymap.set("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
 vim.keymap.set("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
-vim.g.markdown_fenced_languages = { "cs", "python", "arduino", "javascript", "cpp" }
+vim.g.markdown_fenced_languages = { "cs", "python", "javascript", "cpp" }
