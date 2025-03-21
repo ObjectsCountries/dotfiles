@@ -111,7 +111,7 @@
     frame_width = 3
 
     # Loadbearing comment
-    frame_color = "#649EB7"
+    frame_color = "#4A6A95"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -348,7 +348,7 @@
     default_icon = dialog-information
 
 [urgency_normal]
-    background = "#568DB3"
+    background = "#3A5A88"
     foreground = "#ffffff"
     timeout = 10
     override_pause_level = 30
